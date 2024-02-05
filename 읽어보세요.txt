@@ -1,0 +1,36 @@
+1. IDE를 pycharm 과 DBeaver 와 유사한 DataDrip으로 통합합니다.
+시작 화면에서 cmd 를 실행한 후 아래 커맨드를 실행하여 설치해주세요
+
+winget install JetBrains.PyCharm.Professional
+winget install JetBrains.DataGrip
+
+2. 우리는 DB를 ProjectDB 로 통일합니다.
+테이블 작성시
+이름이니셜_테이블이름
+으로 통일합니다.
+예시) KMS_ExampleTable
+
+3. 데이터베이스 접속은 아래와 같이 합니다.
+
+host
+175.122.58.102
+
+port
+33063
+
+username
+KMS
+
+password
+1234q1!
+
+만약 편하게 접속을 원하시면 다음을 복사합니다.
+
+conn = pymysql.connect(
+    host='175.122.58.102',
+    port=33063,
+    user='KMS',
+    password='1234Q1@',
+    db='ProjectDB',
+    charset='utf8',
+)
